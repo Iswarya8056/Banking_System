@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Manager Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        form {
+            margin: 10px 0;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 18px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    
+        <h1>Bank Manager Dashboard</h1>
+        <form action="DashboardRedirectServlet" method="post">
+            <input type="hidden" name="action" value="CreateAccount">
+            <button type="submit">Create a New Account</button>
+        </form>
+        <form action="DashboardRedirectServlet" method="post">
+            <input type="hidden" name="action" value="ViewAccount">
+            <button type="submit">View Account Details</button>
+        </form>
+        <form action="DashboardRedirectServlet" method="post">
+            <input type="hidden" name="action" value="TransactionHistory">
+            <button type="submit">Edit Account Details</button>
+        </form>
+        <form action="DashboardRedirectServlet" method="post">
+            <input type="hidden" name="action" value="EditAccount">
+            <button type="submit">Delete Account </button>
+        </form>
+    </div>
+    </body>
+</html>
